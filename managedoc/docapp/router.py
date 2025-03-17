@@ -1,4 +1,4 @@
-from elrahapi.router.route_config import  RouteConfig
+from elrahapi.router.route_config import  AuthorizationConfig, RouteConfig
 from elrahapi.router.router_default_routes_name import DefaultRoutesName
 from managedoc.docapp.cruds import myapp_crud
 from managedoc.settings.auth_configs import authentication
@@ -18,9 +18,19 @@ read_all_config=RouteConfig(
     route_name=DefaultRoutesName.READ_ALL,
     is_activated=True,
     is_protected=True,
-    privileges=["CAN_RETRIEVE_ALL_DOCUMENTS","CAN_RETRIEVE_ONE_DOCUMENT"]
+
 )
-app_docapp = router_provider.initialize_router(init_data=[read_all_config])
+authorizations:List[AuthorizationConfig]=[
+    AuthorizationConfig(
+        route_name = DefaultRoutesName.READ_ALL,
+        privileges=["CAN_RETRIEVE_ALL_DOCUMENTS","CAN_RETRIEVE_ONE_DOCUMENT"]
+    )
+]
+
+app_docapp = router_provider.initialize_router(
+    init_data=[read_all_config],
+    authorizations=authorizations
+    )
 
 # init_data: List[RouteConfig] = [
 #     RouteConfig(route_name=DefaultRoutesName.CREATE, is_activated=True),
