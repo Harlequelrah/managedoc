@@ -1,6 +1,6 @@
 # Description
 
-Ceci est un projet backend d'API pour la gestion de document avec plusieurs types d'utilisateurs.
+Ceci est un projet backend d'API pour la gestion de document avec plusieurs types d'utilisateurs basés sur les roles avec un model utilisateur.
 
 ## Installation
 
