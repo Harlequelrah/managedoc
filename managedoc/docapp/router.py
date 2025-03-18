@@ -1,7 +1,7 @@
 from elrahapi.router.route_config import  AuthorizationConfig, RouteConfig
 from elrahapi.router.router_default_routes_name import DefaultRoutesName
 from managedoc.docapp.cruds import myapp_crud
-from managedoc.settings.auth_configs import authentication
+from managedoc.settings.database import authentication
 from typing import List
 from elrahapi.router.router_provider import CustomRouterProvider
 

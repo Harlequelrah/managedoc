@@ -15,4 +15,4 @@ finally:
     sessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
     Base = declarative_base()
     authentication.session_factory=sessionLocal
-    authentication.Base = Base
+

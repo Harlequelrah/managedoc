@@ -2,7 +2,7 @@
 from elrahapi.router.router_default_routes_name import DefaultRoutesName
 from elrahapi.router.router_provider import CustomRouterProvider
 from .cruds import user_crud,user_privilege_crud,role_crud,privilege_crud,role_privilege_crud
-from managedoc.settings.auth_configs import authentication
+from managedoc.settings.database import authentication
 
 
 user_router_provider = CustomRouterProvider(
