@@ -13,7 +13,7 @@ class UserUpdateModel(model.UserUpdateModel):
 class UserPatchModel(model.UserPatchModel):
     pass
 
-class UserPydanticModel(model.UserPydanticModel):
+class UserReadModel(model.UserReadModel):
     class Config :
         from_attributes=True
 

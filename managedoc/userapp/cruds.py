@@ -7,7 +7,7 @@ from elrahapi.crud.crud_forgery import CrudForgery
 from managedoc.settings.database import authentication
 from elrahapi.crud.crud_models import CrudModels
 from .models import User, UserPrivilege,Role,Privilege,RolePrivilege
-from .schemas import UserCreateModel,UserUpdateModel,UserPatchModel,UserPydanticModel
+from .schemas import UserCreateModel,UserUpdateModel,UserPatchModel,UserReadModel
 from elrahapi.authorization.user_privilege_model import UserPrivilegeCreateModel,UserPrivilegeUpdateModel
 from elrahapi.crud.crud_forgery import CrudForgery
 
@@ -18,7 +18,7 @@ user_crud_models = CrudModels(
     CreateModel=UserCreateModel,
     UpdateModel=UserUpdateModel,
     PatchModel=UserPatchModel,
-    PydanticModel=UserPydanticModel
+    PydanticModel=UserReadModel
 )
 
 role_crud_models=CrudModels(
